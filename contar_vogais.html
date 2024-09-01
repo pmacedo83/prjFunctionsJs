@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Vogais em uma String</title>
+</head>
+<body>
+    <h1>Contar Vogais em uma String</h1>
+    <label for="textoEntrada">Digite um texto:</label>
+    <input type="text" id="textoEntrada" /><br/><br/>
+    <button onclick="contarVogais()">Contar Vogais</button>
+
+    <script>
+        function contarVogais() {
+            const texto = document.getElementById('textoEntrada').value;
+            const vogais = 'aeiouAEIOU';
+            let contagem = 0;
+            for (let char of texto) {
+                if (vogais.includes(char)) {
+                    contagem++;
+                }
+            }
+            alert("O número de vogais é: " + contagem);
+        }
+    </script>
+</body>
+</html>

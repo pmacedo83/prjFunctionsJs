@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter uma String</title>
+</head>
+<body>
+    <h1>Inverter uma String</h1>
+    <label for="texto">Digite um texto:</label>
+    <input type="text" id="texto" /><br/><br/>
+    <button onclick="inverterString()">Inverter</button>
+
+    <script>
+        function inverterString() {
+            const texto = document.getElementById('texto').value;
+            const invertido = texto.split('').reverse().join('');
+            alert("Texto invertido: " + invertido);
+        }
+    </script>
+</body>
+</html>

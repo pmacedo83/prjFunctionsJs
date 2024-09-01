@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalizar Palavras</title>
+</head>
+<body>
+    <h1>Capitalizar Palavras</h1>
+    <label for="textoEntrada">Digite um texto:</label>
+    <input type="text" id="textoEntrada" /><br/><br/>
+    <button onclick="capitalizarPalavras()">Capitalizar</button>
+
+    <script>
+        function capitalizarPalavras() {
+            const texto = document.getElementById('textoEntrada').value;
+            const capitalizado = texto.split(' ').map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1)).join(' ');
+            alert("Texto capitalizado: " + capitalizado);
+        }
+    </script>
+</body>
+</html>
